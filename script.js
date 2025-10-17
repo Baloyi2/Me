@@ -38,6 +38,21 @@
     nav.classList.toggle('open');
   });
 
+  // close mobile menu on outside click or Escape
+  document.addEventListener('click', (e)=>{
+    if(!nav.contains(e.target) && menuToggle.getAttribute('aria-expanded') === 'true'){
+      menuToggle.setAttribute('aria-expanded','false');
+      nav.classList.remove('open');
+    }
+  });
+  document.addEventListener('keydown', (e)=>{
+    if(e.key === 'Escape' && nav.classList.contains('open')){
+      menuToggle.setAttribute('aria-expanded','false');
+      nav.classList.remove('open');
+      menuToggle.focus();
+    }
+  });
+
   // copy email helper
   copyEmail.addEventListener('click', async ()=>{
   const email = 'baloyinwayitelo6@gmail.com';

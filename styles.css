@@ -54,6 +54,14 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
   .avatar{width:clamp(110px,28vw,160px);height:clamp(110px,28vw,160px)}
   .nav-list{display:none;}
   .menu-toggle{display:inline-block}
+  .nav.open .nav-list{display:block;position:absolute;left:0;right:0;top:64px;background:var(--card);padding:1rem;border-radius:0 0 var(--radius) var(--radius);box-shadow:var(--shadow)}
+  .nav.open .nav-list li{margin:0.25rem 0}
+  .nav-list a{display:block;padding:.75rem 1rem}
+
+  /* Make form controls full width on small screens */
+  .contact-form input,.contact-form textarea{width:100%}
+  .form-actions{flex-direction:column;align-items:stretch}
+  .form-actions .btn{width:100%}
 }
 
 /* Focus states for accessibility */
