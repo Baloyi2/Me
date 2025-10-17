@@ -77,6 +77,16 @@
     });
   });
 
+  // close mobile menu when a nav link is clicked (mobile UX)
+  document.querySelectorAll('.nav-list a').forEach(link => {
+    link.addEventListener('click', ()=>{
+      if(nav.classList.contains('open')){
+        nav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded','false');
+      }
+    });
+  });
+
   // form submit — POST to Netlify Forms when deployed
   const form = document.getElementById('contactForm');
   form.addEventListener('submit', (e)=>{
