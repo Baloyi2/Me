@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Me — Baloyi Nwayitelo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+  <a href="#hero" class="logo">Baloyi Nwayitelo</a>
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="actions">
+        <button id="themeToggle" aria-pressed="false" title="Toggle dark mode">🌙</button>
+        <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="primaryNav">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero" tabindex="-1">
+      <div class="container hero-inner">
+  <img src="me.jpg" alt="Portrait of Baloyi Nwayitelo" class="avatar">
+        <div class="hero-copy">
+          <h1>Hi, I'm Baloyi Nwayitelo</h1>
+          <p class="lead">I build thoughtful web experiences — designer, developer, and lifelong learner.</p>
+          <p class="cta-row">
+            <a class="btn primary" href="#projects">See my work</a>
+            <button class="btn" id="copyEmail">Copy email</button>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <h2>About Me</h2>
+      <p>I’m a web developer focused on building accessible, performant, and maintainable web applications. I enjoy working across the stack and learning new tools.</p>
+      <p>Interests: UI design, performance optimization, open-source, and teaching.</p>
+    </section>
+
+    <section id="skills" class="section container">
+      <h2>Skills</h2>
+      <ul class="skills-grid">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="section container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Joy Hair Salon</h3>
+          <p>A live site for Joy Hair Salon — a friendly salon website with booking info and services.</p>
+          <a href="https://joyhairsalon.netlify.app/" class="link" target="_blank" rel="noopener">Visit site</a>
+        </article>
+        <article class="project-card">
+          <h3>Baloyi Birthday Wishes</h3>
+          <p>A playful birthday-wishes site and project showcase.</p>
+          <a href="https://baloyi-bithday-wishs.netlify.app/" class="link" target="_blank" rel="noopener">Visit site</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <p>Want to collaborate or ask a question? Reach out.</p>
+      <div class="contact-methods">
+        <p>Email: <a href="mailto:baloyinwayitelo6@gmail.com">baloyinwayitelo6@gmail.com</a></p>
+        <p>Phone / WhatsApp: <a href="tel:+27718342937">+27 71 834 2937</a> — <a href="https://wa.me/27718342937" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+      </div>
+      <form id="contactForm" class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <!-- honeypot field to trap bots -->
+        <p style="display:none">
+          <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+        </p>
+        <label for="name">Name</label>
+        <input id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Send</button>
+          <button type="reset" class="btn">Reset</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+  <p>&copy; <span id="year"></span> Baloyi Nwayitelo — Built with ❤️</p>
+      <p class="socials">
+        <a href="https://joyhairsalon.netlify.app/" target="_blank" rel="noopener">Joy Hair Salon</a>
+        <a href="https://baloyi-bithday-wishs.netlify.app/" target="_blank" rel="noopener">Birthday Wishes</a>
+        <a href="#" aria-label="GitHub">GitHub</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
