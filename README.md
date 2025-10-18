@@ -51,4 +51,10 @@ Notes
 
 - Local testing: Netlify Forms are only captured by Netlify when the site is hosted there. To test locally, you can deploy to Netlify or use a server that forwards POSTs to Netlify.
 - Alternatively, if you prefer not to use Netlify, I can wire Formspree (which posts to their endpoint) so messages are emailed to you without Netlify.
+ 
+Extras added to this template
+
+- `resume.pdf` — drop your resume file in the site root to enable the "Download resume" link on the homepage.
+- Projects now include thumbnails and links; update the `src` attributes for real screenshots.
+- A simple testimonials section was added; replace or add real quotes as you get feedback.
 License: CC0

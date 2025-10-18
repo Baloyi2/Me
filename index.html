@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Portfolio of Baloyi Nwayitelo — front-end developer (HTML, CSS, JavaScript). Projects, contact and resume." />
   <title>About Me — Baloyi Nwayitelo</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +35,13 @@
   <img src="me.jpg" alt="Portrait of Baloyi Nwayitelo" class="avatar">
         <div class="hero-copy">
           <h1>Hi, I'm Baloyi Nwayitelo</h1>
-          <p class="lead">I build thoughtful web experiences — designer, developer, and lifelong learner.</p>
+          <p class="role">Front-end developer — HTML • CSS • JavaScript</p>
+          <p class="lead">I build thoughtful web experiences. I enjoy learning new things and helping anyone who needs assistance.</p>
+          <p class="meta">Based in South Africa · <a href="resume.pdf" download class="link">Download resume</a></p>
+          <p class="hero-socials">
+            <a href="#" aria-label="GitHub" target="_blank" rel="noopener">GitHub</a>
+            <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener">LinkedIn</a>
+          </p>
           <p class="cta-row">
             <a class="btn primary" href="#projects">See my work</a>
             <button class="btn" id="copyEmail">Copy email</button>
@@ -44,9 +51,9 @@
     </section>
 
     <section id="about" class="section container">
-      <h2>About Me</h2>
-      <p>I’m a web developer focused on building accessible, performant, and maintainable web applications. I enjoy working across the stack and learning new tools.</p>
-      <p>Interests: UI design, performance optimization, open-source, and teaching.</p>
+  <h2>About Me</h2>
+  <p>I’m a web developer focused on building accessible, performant, and maintainable web applications. I enjoy learning new things and helping anyone who needs help.</p>
+  <p>Interests: UI design, performance optimization, open-source, and teaching.</p>
     </section>
 
     <section id="skills" class="section container">
@@ -62,15 +69,31 @@
       <h2>Projects</h2>
       <div class="projects-grid">
         <article class="project-card">
-          <h3>Joy Hair Salon</h3>
-          <p>A live site for Joy Hair Salon — a friendly salon website with booking info and services.</p>
-          <a href="https://joyhairsalon.netlify.app/" class="link" target="_blank" rel="noopener">Visit site</a>
+          <img class="project-thumb" src="https://via.placeholder.com/600x360?text=Joy+Hair+Salon" alt="Joy Hair Salon screenshot">
+          <div class="project-body">
+            <h3>Joy Hair Salon</h3>
+            <p>A friendly salon website with booking info and services. Built with responsive HTML/CSS.</p>
+            <p class="project-links"><a href="https://joyhairsalon.netlify.app/" class="link" target="_blank" rel="noopener">Live demo</a> · <a href="#" class="link">Source</a></p>
+          </div>
         </article>
         <article class="project-card">
-          <h3>Baloyi Birthday Wishes</h3>
-          <p>A playful birthday-wishes site and project showcase.</p>
-          <a href="https://baloyi-bithday-wishs.netlify.app/" class="link" target="_blank" rel="noopener">Visit site</a>
+          <img class="project-thumb" src="https://via.placeholder.com/600x360?text=Birthday+Wishes" alt="Birthday Wishes screenshot">
+          <div class="project-body">
+            <h3>Baloyi Birthday Wishes</h3>
+            <p>A playful interactive birthday-wishes site. Demonstrates DOM manipulation and animations with JavaScript.</p>
+            <p class="project-links"><a href="https://baloyi-bithday-wishs.netlify.app/" class="link" target="_blank" rel="noopener">Live demo</a> · <a href="#" class="link">Source</a></p>
+          </div>
         </article>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section container">
+      <h2>What people say</h2>
+      <div class="testimonials-grid">
+        <blockquote class="testimonial">
+          <p>"Baloyi quickly understood our needs and produced a clean, responsive site. Great communication and fast delivery."</p>
+          <footer>— Client at Joy Hair Salon</footer>
+        </blockquote>
       </div>
     </section>
 
