@@ -6,6 +6,27 @@
   <meta name="description" content="Portfolio of Baloyi Nwayitelo — front-end developer (HTML, CSS, JavaScript). Projects, contact and resume." />
   <title>About Me — Baloyi Nwayitelo</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="manifest" href="site.webmanifest" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Baloyi Nwayitelo — Front-end developer" />
+  <meta property="og:description" content="Front-end developer (HTML, CSS, JavaScript). See projects, contact and resume." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://example.com/thumbnail.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- JSON-LD basic structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Baloyi Nwayitelo",
+    "jobTitle": "Front-end developer",
+    "url": "https://your-site.example/",
+    "sameAs": ["https://github.com/yourname","https://www.linkedin.com/in/yourname/"],
+    "email": "mailto:baloyinwayitelo6@gmail.com"
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -72,16 +93,16 @@
           <img class="project-thumb" src="https://via.placeholder.com/600x360?text=Joy+Hair+Salon" alt="Joy Hair Salon screenshot">
           <div class="project-body">
             <h3>Joy Hair Salon</h3>
-            <p>A friendly salon website with booking info and services. Built with responsive HTML/CSS.</p>
-            <p class="project-links"><a href="https://joyhairsalon.netlify.app/" class="link" target="_blank" rel="noopener">Live demo</a> · <a href="#" class="link">Source</a></p>
+            <p>A modern, mobile-first site for Joy Hair Salon — showcases services, pricing and easy booking information to help customers schedule appointments.</p>
+            <p class="project-links"><a href="https://joyhairsalon.netlify.app/" class="link" target="_blank" rel="noopener">Click here</a> · <a href="#" class="link">Source</a></p>
           </div>
         </article>
         <article class="project-card">
           <img class="project-thumb" src="https://via.placeholder.com/600x360?text=Birthday+Wishes" alt="Birthday Wishes screenshot">
           <div class="project-body">
             <h3>Baloyi Birthday Wishes</h3>
-            <p>A playful interactive birthday-wishes site. Demonstrates DOM manipulation and animations with JavaScript.</p>
-            <p class="project-links"><a href="https://baloyi-bithday-wishs.netlify.app/" class="link" target="_blank" rel="noopener">Live demo</a> · <a href="#" class="link">Source</a></p>
+            <p>A playful birthday-wishes site that lets visitors send animated greetings — built to delight and share smiles.</p>
+            <p class="project-links"><a href="https://baloyi-bithday-wishs.netlify.app/" class="link" target="_blank" rel="noopener">Click here</a> · <a href="#" class="link">Source</a></p>
           </div>
         </article>
       </div>
@@ -100,6 +121,7 @@
     <section id="contact" class="section container">
       <h2>Contact</h2>
       <p>Want to collaborate or ask a question? Reach out.</p>
+      <div id="formStatus" class="form-status" aria-live="polite" role="status" style="margin-bottom:.5rem"></div>
       <div class="contact-methods">
         <p>Email: <a href="mailto:baloyinwayitelo6@gmail.com">baloyinwayitelo6@gmail.com</a></p>
         <p>Phone / WhatsApp: <a href="tel:+27718342937">+27 71 834 2937</a> — <a href="https://wa.me/27718342937" target="_blank" rel="noopener">Chat on WhatsApp</a></p>

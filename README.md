@@ -57,4 +57,11 @@ Extras added to this template
 - `resume.pdf` — drop your resume file in the site root to enable the "Download resume" link on the homepage.
 - Projects now include thumbnails and links; update the `src` attributes for real screenshots.
 - A simple testimonials section was added; replace or add real quotes as you get feedback.
+ 
+Production notes
+
+- `favicon.ico` and `site.webmanifest`: add your favicon and web manifest for PWA/bookmarking. `site.webmanifest` should reference your icon files and basic metadata.
+- Open Graph image: replace the `og:image` meta in `index.html` with a real thumbnail URL for better sharing previews on social platforms.
+- JSON-LD: update the `sameAs` and `url` values in `index.html` to your real profile URLs.
+
 License: CC0

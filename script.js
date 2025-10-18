@@ -89,6 +89,7 @@
 
   // form submit — POST to Netlify Forms when deployed
   const form = document.getElementById('contactForm');
+  const formStatus = document.getElementById('formStatus');
   form.addEventListener('submit', (e)=>{
     e.preventDefault();
     const formData = new FormData(form);
@@ -108,16 +109,28 @@
     const payload = {};
     for(const [k,v] of formData.entries()) payload[k] = v;
 
-    fetch('/', {
+    // show sending state
+    if(formStatus){ formStatus.textContent = 'Sending...'; formStatus.className = 'form-status'; }
+
+    // determine endpoint: if the form has an explicit action (e.g. Formspree), use it; otherwise post to '/' (Netlify capture)
+    const explicitAction = (form.getAttribute('action') || '').trim();
+    const endpoint = explicitAction && explicitAction !== '#' ? explicitAction : '/';
+
+    fetch(endpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode(payload)
-    }).then(()=>{
-      alert('Thanks — your message was sent.');
-      form.reset();
+    }).then((response)=>{
+      // treat 200-299 as success; Formspree may redirect/return 200
+      if(response && response.ok || endpoint === '/'){
+        if(formStatus){ formStatus.textContent = 'Thanks — your message was sent.'; formStatus.className = 'form-status success'; }
+        form.reset();
+      } else {
+        throw new Error('Network response not ok');
+      }
     }).catch((err)=>{
       console.error(err);
-      alert('Sorry — there was a problem sending your message.');
+      if(formStatus){ formStatus.textContent = 'Sorry — there was a problem sending your message.'; formStatus.className = 'form-status error'; }
     });
   });
 
